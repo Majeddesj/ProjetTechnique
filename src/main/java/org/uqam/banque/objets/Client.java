@@ -1,4 +1,4 @@
-package org.technique.objets;
+package org.uqam.banque.objets;
 
 import java.util.ArrayList;
 import java.util.List;

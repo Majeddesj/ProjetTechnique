@@ -1,7 +1,7 @@
-package org.technique.main;
+package org.uqam.banque.main;
 
-import org.technique.baseDeDonnees.BaseDeDonnees;
-import org.technique.commande.CommandeClient;
+import org.uqam.banque.baseDeDonnees.BaseDeDonnees;
+import org.uqam.banque.commande.CommandeClient;
 
 public class ClientMain {
 

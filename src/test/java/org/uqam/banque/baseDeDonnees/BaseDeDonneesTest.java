@@ -1,4 +1,4 @@
-package org.technique.baseDeDonnees;
+package org.uqam.banque.baseDeDonnees;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -6,8 +6,9 @@ import java.util.List;
 
 import org.junit.Assert;
 import org.junit.Test;
-import org.technique.objets.Client;
-import org.technique.objets.Produit;
+import org.uqam.banque.baseDeDonnees.BaseDeDonnees;
+import org.uqam.banque.objets.Client;
+import org.uqam.banque.objets.Produit;
 
 public class BaseDeDonneesTest {
 

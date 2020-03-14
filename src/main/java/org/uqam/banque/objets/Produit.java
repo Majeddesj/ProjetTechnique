@@ -1,4 +1,4 @@
-package org.technique.objets;
+package org.uqam.banque.objets;
 
 public class Produit {
 

@@ -1,8 +1,8 @@
-package org.technique.commande;
+package org.uqam.banque.commande;
 
-import org.technique.baseDeDonnees.BaseDeDonnees;
-import org.technique.objets.Client;
-import org.technique.objets.Produit;
+import org.uqam.banque.baseDeDonnees.BaseDeDonnees;
+import org.uqam.banque.objets.Client;
+import org.uqam.banque.objets.Produit;
 
 public class CommandeClient {
 
@@ -54,7 +54,6 @@ public class CommandeClient {
     }
     
     public static int unsubscribeProduitAuClientParNom(BaseDeDonnees donnees, String nomClient, String idProduit) {
-		// TODO Auto-generated method stub
 		return 0;
 	}
 

@@ -1,8 +1,8 @@
-package org.technique.main;
+package org.uqam.banque.main;
 
-import org.technique.baseDeDonnees.BaseDeDonnees;
-import org.technique.commande.CommandeClient;
-import org.technique.commande.CommandeEmp;
+import org.uqam.banque.baseDeDonnees.BaseDeDonnees;
+import org.uqam.banque.commande.CommandeClient;
+import org.uqam.banque.commande.CommandeEmp;
 
 public class EmpMain {
 

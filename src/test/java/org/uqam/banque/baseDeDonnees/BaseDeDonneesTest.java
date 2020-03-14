@@ -1,11 +1,9 @@
 package org.uqam.banque.baseDeDonnees;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.util.List;
 
-import org.junit.Assert;
-import org.junit.Test;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.uqam.banque.baseDeDonnees.BaseDeDonnees;
 import org.uqam.banque.objets.Client;
 import org.uqam.banque.objets.Produit;
@@ -16,42 +14,42 @@ public class BaseDeDonneesTest {
     public void givenBaseDeDonnees_whenFabriqueObjet_thenOk() {
         BaseDeDonnees baseDeDonnees = new BaseDeDonnees();
 
-        Assert.assertNotNull(baseDeDonnees);
+        Assertions.assertNotNull(baseDeDonnees);
 
         final List<Produit> produits = baseDeDonnees.getProduits();
 
-        Assert.assertNotNull(produits);
-        Assert.assertFalse(produits.isEmpty());
-        Assert.assertEquals(3, produits.size());
+        Assertions.assertNotNull(produits);
+        Assertions.assertFalse(produits.isEmpty());
+        Assertions.assertEquals(3, produits.size());
 
         Produit produit1 = produits.get(0);
-        Assert.assertEquals("ID_PRODUIT_001", produit1.getId());
-        Assert.assertEquals("Produit 01", produit1.getNom());
+        Assertions.assertEquals("ID_PRODUIT_001", produit1.getId());
+        Assertions.assertEquals("Produit 01", produit1.getNom());
 
         Produit produit2 = produits.get(1);
-        Assert.assertEquals("ID_PRODUIT_002", produit2.getId());
-        Assert.assertEquals("Produit 02", produit2.getNom());
+        Assertions.assertEquals("ID_PRODUIT_002", produit2.getId());
+        Assertions.assertEquals("Produit 02", produit2.getNom());
 
         Produit produit3 = produits.get(2);
-        Assert.assertEquals("ID_PRODUIT_003", produit3.getId());
-        Assert.assertEquals("Produit 03", produit3.getNom());
+        Assertions.assertEquals("ID_PRODUIT_003", produit3.getId());
+        Assertions.assertEquals("Produit 03", produit3.getNom());
 
         final List<Client> clients = baseDeDonnees.getClients();
 
-        Assert.assertNotNull(clients);
-        Assert.assertFalse(clients.isEmpty());
-        Assert.assertEquals(1, clients.size());
+        Assertions.assertNotNull(clients);
+        Assertions.assertFalse(clients.isEmpty());
+        Assertions.assertEquals(1, clients.size());
 
         Client client1 = clients.get(0);
-        Assert.assertEquals("ID_CLIENT_001", client1.getId());
-        Assert.assertEquals("Abidi", client1.getNom());
-        Assert.assertEquals("Majed", client1.getPrenom());
-        Assert.assertEquals("Mon adresse", client1.getAdresse());
-        Assert.assertNotNull(client1.getProduits());
-        Assert.assertFalse(client1.getProduits().isEmpty());
-        Assert.assertEquals(2, client1.getProduits().size());
-        Assert.assertEquals(produit1, client1.getProduits().get(0));
-        Assert.assertEquals(produit2, client1.getProduits().get(1));
+        Assertions.assertEquals("ID_CLIENT_001", client1.getId());
+        Assertions.assertEquals("Abidi", client1.getNom());
+        Assertions.assertEquals("Majed", client1.getPrenom());
+        Assertions.assertEquals("Mon adresse", client1.getAdresse());
+        Assertions.assertNotNull(client1.getProduits());
+        Assertions.assertFalse(client1.getProduits().isEmpty());
+        Assertions.assertEquals(2, client1.getProduits().size());
+        Assertions.assertEquals(produit1, client1.getProduits().get(0));
+        Assertions.assertEquals(produit2, client1.getProduits().get(1));
     }
 
     @Test
@@ -62,16 +60,16 @@ public class BaseDeDonneesTest {
 
         final Client client1 = baseDeDonnees.rechercheClientParNom("Abidi");
 
-        Assert.assertNotNull(client1);
-        Assert.assertEquals("ID_CLIENT_001", client1.getId());
-        Assert.assertEquals("Abidi", client1.getNom());
-        Assert.assertEquals("Majed", client1.getPrenom());
-        Assert.assertEquals("Mon adresse", client1.getAdresse());
-        Assert.assertNotNull(client1.getProduits());
-        Assert.assertFalse(client1.getProduits().isEmpty());
-        Assert.assertEquals(2, client1.getProduits().size());
-        Assert.assertEquals(produits.get(0), client1.getProduits().get(0));
-        Assert.assertEquals(produits.get(1), client1.getProduits().get(1));
+        Assertions.assertNotNull(client1);
+        Assertions.assertEquals("ID_CLIENT_001", client1.getId());
+        Assertions.assertEquals("Abidi", client1.getNom());
+        Assertions.assertEquals("Majed", client1.getPrenom());
+        Assertions.assertEquals("Mon adresse", client1.getAdresse());
+        Assertions.assertNotNull(client1.getProduits());
+        Assertions.assertFalse(client1.getProduits().isEmpty());
+        Assertions.assertEquals(2, client1.getProduits().size());
+        Assertions.assertEquals(produits.get(0), client1.getProduits().get(0));
+        Assertions.assertEquals(produits.get(1), client1.getProduits().get(1));
     }
 
     @Test
@@ -82,7 +80,7 @@ public class BaseDeDonneesTest {
 
         final Client client1 = baseDeDonnees.rechercheClientParNom("INEXISTANT");
 
-        Assert.assertNull(client1);
+        Assertions.assertNull(client1);
     }
 
     @Test
@@ -93,7 +91,7 @@ public class BaseDeDonneesTest {
 
         final Client client1 = baseDeDonnees.rechercheClientParNom(null);
 
-        Assert.assertNull(client1);
+        Assertions.assertNull(client1);
     }
 
     @Test
@@ -104,7 +102,7 @@ public class BaseDeDonneesTest {
 
         final Client client1 = baseDeDonnees.rechercheClientParNom("");
 
-        Assert.assertNull(client1);
+        Assertions.assertNull(client1);
     }
 
 }

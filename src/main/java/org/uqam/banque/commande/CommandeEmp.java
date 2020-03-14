@@ -22,7 +22,7 @@ public class CommandeEmp {
                 System.out.println("            - Nom: " + produit.getNom());
             }
         } else {
-            System.out.println("Aucun client correspondant à ce nom " + nomClient);
+            System.out.println("Aucun client correspondant a ce nom " + nomClient);
         }
 
         // tout est beau :)

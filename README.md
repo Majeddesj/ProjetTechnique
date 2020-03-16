@@ -27,3 +27,9 @@ chmod +x scripts/banque.sh
 ./Employe.sh --list Abidi
 
 
+# color.red ( pour mes commits vs Stories J'ai voulu rebase mes Commi pour les linker avec mes stories qui sont sous git projet mais je recevais des message d'erreur donc j'avais peur de perdre ma configuration.) 
+
+# Mes commits doivent ressembler comme suit :
+#  Sous la branche Feature-add-commands-for-employes: commit : Ajouter commande liste produit par client EMP [1#card-34319974, 1#card-34321111]
+
+

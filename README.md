@@ -1,3 +1,5 @@
+# 0. Veuillez vous connecter sur la branche Feature-add-commands-for-employes
+
 # 1. Compilation du projet
 Nécessite JDK 8 et Maven, puis exécuter:
 ```
@@ -15,8 +17,13 @@ chmod +x scripts/banque.sh
 ```
 ./client.sh -n Abidi --incorrecte
 ./client.sh -incorrect Abidi --status
+./client.sh -n Abidi --subscribe ID_PRODUIT_003
+./client.sh -n Abidi --unsubscribe ID_PRODUIT_003
+./client.sh ./client.sh -n Abidi --unsubscribe ID_PRODUIT_fjdie
+./client.sh -n Inconnu --unsubscribe ID_PRODUIT_003
 ```
 
 # 3. Exécution: employe
+./Employe.sh --list Abidi
 
 

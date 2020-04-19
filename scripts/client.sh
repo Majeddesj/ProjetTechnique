@@ -1,0 +1,1 @@
+java -jar ../target/banque-1.0-SNAPSHOT.jar "$@"

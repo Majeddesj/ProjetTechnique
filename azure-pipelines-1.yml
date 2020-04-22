@@ -14,7 +14,7 @@ steps:
   inputs:
     deploymentScope: 'Resource Group'
     ConnectedServiceName: 'AzureRmPipeline-conn'
-    subscriptionName: '[EnterTheTargetSubscriptionID]'
+    subscriptionName: '6e2360a7-cd2c-4072-8c5a-f5c779cdf930'
     action: 'Create Or Update Resource Group'
     resourceGroupName: 'PRJgroupe'
     location: 'Central US'

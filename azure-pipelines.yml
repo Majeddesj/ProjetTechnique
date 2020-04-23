@@ -12,10 +12,10 @@ variables:
   azureSubscription: '72a4445b-1b44-4a6e-aee8-b4bb219f048e'
   
   # Web app name
-  webAppName: ''
+  webAppName: 'MJPbank'
 
   # Environment name
-  environmentName: ''
+  environmentName: 'Certif'
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'

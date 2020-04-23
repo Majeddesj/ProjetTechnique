@@ -12,7 +12,7 @@ variables:
   azureSubscription: '72a4445b-1b44-4a6e-aee8-b4bb219f048e'
   
   # Web app name
-  webAppName: 'MJPbank'
+  webAppName: 'MPJbank'
 
   # Environment name
   environmentName: 'Certif'

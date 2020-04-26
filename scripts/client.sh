@@ -1,1 +1,1 @@
-java -jar ../target/banque-1.0-SNAPSHOT.jar "$@"
+java -cp ../target/banque-1.0-SNAPSHOT.jar org.uqam.banque.client.ClientMain "$@"

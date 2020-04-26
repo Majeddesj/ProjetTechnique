@@ -38,7 +38,7 @@
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>org.uqam.banque.main.ClientMain</mainClass>
+							<mainClass>org.uqam.banque.client.ClientMain</mainClass>
 						</manifest>
 					</archive>
 				</configuration>

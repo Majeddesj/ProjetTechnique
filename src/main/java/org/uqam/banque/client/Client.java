@@ -1,4 +1,6 @@
-package org.uqam.banque.objets;
+package org.uqam.banque.client;
+
+import org.uqam.banque.banque.Produit;
 
 import java.util.ArrayList;
 import java.util.List;

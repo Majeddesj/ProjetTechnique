@@ -1,8 +1,7 @@
-package org.uqam.banque.commande;
+package org.uqam.banque.client;
 
-import org.uqam.banque.baseDeDonnees.BaseDeDonnees;
-import org.uqam.banque.objets.Client;
-import org.uqam.banque.objets.Produit;
+import org.uqam.banque.commun.BaseDeDonnees;
+import org.uqam.banque.banque.Produit;
 
 public class CommandeClient {
 

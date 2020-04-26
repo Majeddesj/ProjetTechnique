@@ -9,7 +9,7 @@ trigger:
 variables:
 
   # Azure Resource Manager connection created during pipeline creation
-  azureSubscription: '6e2360a7-cd2c-4072-8c5a-f5c779cdf930'
+  azureSubscription: 'f645f84a-8f69-4b48-8791-089560a1b8bc'
   
   # Web app name
   webAppName: 'MPJbank'

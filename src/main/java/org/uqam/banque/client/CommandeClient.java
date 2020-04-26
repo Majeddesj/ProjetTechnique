@@ -5,7 +5,76 @@ import org.uqam.banque.banque.Produit;
 
 public class CommandeClient {
 
-    public static int statutClientParNom(BaseDeDonnees donnees, String nomClient) {
+    BaseDeDonnees donnees = new BaseDeDonnees();
+
+    public void execute(String[] args) {
+
+        if (args.length < 3) {
+            System.out.println("Il faut mettre 3 arguments, de la sorte. \nExemple: ./client -n CLIENT_NAME --status\nExemple: ./client -n CLIENT_NAME --subscribe PRODUCT_ID\nExemple: ./client -n CLIENT_NAME --unsubscribe PRODUCT_ID");
+            System.exit(1);
+        }
+
+        if (!args[0].equals("-n")) {
+            System.out.println("Il faut que le premier argument soit = '-n'. \nExemple: ./client -n CLIENT_NAME --status\nExemple: ./client -n CLIENT_NAME --subscribe PRODUCT_ID\nExemple: ./client -n CLIENT_NAME --unsubscribe PRODUCT_ID");
+            System.exit(2);
+        }
+
+        String nomClient = args[1]; // nom du client
+        String typeCommande = args[2]; // --status, --subscribe, --Unsubscribe par exemple
+
+        if (typeCommande.equals("--status")) {
+            final int codeRetour = statutClientParNom(donnees, nomClient);
+
+            System.exit(codeRetour);
+        } else if (typeCommande.equals("--subscribe")) {
+            if (args.length < 4) {
+                System.out.println("Il faut mettre 4 arguments, de la sorte. \nExemple: ./client -n CLIENT_NAME --subscribe PRODUCT_ID");
+                System.exit(3);
+            }
+
+            String idProduit = args[3]; // nom du client
+
+            final int codeRetourSouscription = souscriptionProduitAuClientParNom(donnees,
+                    nomClient,
+                    idProduit);
+
+            if (codeRetourSouscription != 0) {
+                System.exit(codeRetourSouscription);
+            }
+
+            // affichage du statut du client
+            final int codeRetourStatut = statutClientParNom(donnees, nomClient);
+
+            System.exit(codeRetourStatut);
+
+        } else if (typeCommande.equals("--unsubscribe")) {
+            if (args.length < 4) {
+                System.out.println("Il faut mettre 4 arguments, de la sorte. \nExemple: ./client -n CLIENT_NAME --subscribe PRODUCT_ID");
+                System.exit(3);
+            }
+
+            String idProduit = args[3]; // nom du client
+
+            final int codeRetourunsubscribe = unsubscribeProduitAuClientParNom(donnees,
+                    nomClient,
+                    idProduit);
+
+            if (codeRetourunsubscribe != 0) {
+                System.exit(codeRetourunsubscribe);
+            }
+
+            // affichage du statut du client
+            final int codeRetourStatut = statutClientParNom(donnees, nomClient);
+
+            System.exit(codeRetourStatut);
+        } else {
+            System.out.println("Seul --status, --subscribe et Unsubscribe sont autorises pour les commandes.");
+            System.exit(10);
+        }
+
+    }
+
+    public int statutClientParNom(BaseDeDonnees donnees, String nomClient) {
 
         final Client client = donnees.rechercheClientParNom(nomClient);
 
@@ -28,7 +97,7 @@ public class CommandeClient {
         return 0;
     }
 
-    public static int souscriptionProduitAuClientParNom(BaseDeDonnees donnees, String nomClient, String idProduit) {
+    public int souscriptionProduitAuClientParNom(BaseDeDonnees donnees, String nomClient, String idProduit) {
 
         final Client client = donnees.rechercheClientParNom(nomClient);
         final Produit produit = donnees.rechercheProduitParId(idProduit);
@@ -55,7 +124,7 @@ public class CommandeClient {
         return 0;
     }
     
-    public static int unsubscribeProduitAuClientParNom(BaseDeDonnees donnees, String nomClient, String idProduit) {
+    public int unsubscribeProduitAuClientParNom(BaseDeDonnees donnees, String nomClient, String idProduit) {
 
         final Client client = donnees.rechercheClientParNom(nomClient);
         final Produit produit = donnees.rechercheProduitParId(idProduit);

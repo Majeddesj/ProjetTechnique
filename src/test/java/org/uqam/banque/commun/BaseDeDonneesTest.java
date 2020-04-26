@@ -1,4 +1,4 @@
-package org.uqam.banque.baseDeDonnees;
+package org.uqam.banque.commun;
 
 import java.util.List;
 

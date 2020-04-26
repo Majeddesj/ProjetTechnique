@@ -4,3 +4,4 @@
 /launchers/
 /.idea/
 *.iml
+/target/

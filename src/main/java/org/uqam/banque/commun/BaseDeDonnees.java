@@ -1,10 +1,10 @@
-package org.uqam.banque.baseDeDonnees;
+package org.uqam.banque.commun;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.uqam.banque.objets.Client;
-import org.uqam.banque.objets.Produit;
+import org.uqam.banque.client.Client;
+import org.uqam.banque.banque.Produit;
 
 public class BaseDeDonnees {
 

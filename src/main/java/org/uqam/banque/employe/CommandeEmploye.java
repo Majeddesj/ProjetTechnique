@@ -1,10 +1,10 @@
-package org.uqam.banque.commande;
+package org.uqam.banque.employe;
 
-import org.uqam.banque.baseDeDonnees.BaseDeDonnees;
-import org.uqam.banque.objets.Client;
-import org.uqam.banque.objets.Produit;
+import org.uqam.banque.commun.BaseDeDonnees;
+import org.uqam.banque.client.Client;
+import org.uqam.banque.banque.Produit;
 
-public class CommandeEmp {
+public class CommandeEmploye {
 
     public static int listeClientParNom(BaseDeDonnees donnees, String nomClient) {
 

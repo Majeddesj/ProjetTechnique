@@ -4,9 +4,9 @@ import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.uqam.banque.baseDeDonnees.BaseDeDonnees;
-import org.uqam.banque.objets.Client;
-import org.uqam.banque.objets.Produit;
+import org.uqam.banque.client.Client;
+import org.uqam.banque.banque.Produit;
+import org.uqam.banque.commun.BaseDeDonnees;
 
 public class BaseDeDonneesTest {
 

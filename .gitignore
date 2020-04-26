@@ -1,15 +1,6 @@
 /.settings/
 .classpath
 .project
-/lunchers/
-launchers/Unsubscribe inconnu Produit 3.launch
-launchers/Commande incorrecte 1.launch
-launchers/Commande incorrecte 3.launch
-launchers/Status Abidi.launch
-launchers/Status inconnu.launch
-launchers/Subscribe Abidi Produit 3.launch
-launchers/Commande incorrecte 2.launch
-launchers/Subscribe Abidi Produit inconnu.launch
-launchers/Unsubscribe Abidi Produit 3.launch
-launchers/Subscribe inconnu Produit 3.launch
-launchers/Unsubscribe Abidi Produit inconnu.launch
+/launchers/
+/.idea/
+*.iml

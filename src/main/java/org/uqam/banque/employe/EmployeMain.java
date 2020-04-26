@@ -1,10 +1,8 @@
-package org.uqam.banque.main;
+package org.uqam.banque.employe;
 
-import org.uqam.banque.baseDeDonnees.BaseDeDonnees;
-import org.uqam.banque.commande.CommandeClient;
-import org.uqam.banque.commande.CommandeEmp;
+import org.uqam.banque.commun.BaseDeDonnees;
 
-public class EmpMain {
+public class EmployeMain {
 
     public static void main(String[] args) {
 
@@ -21,7 +19,7 @@ public class EmpMain {
         String nomClient = args[1]; // nom du client
 
         if (typeCommande.equals("--list")) {
-            final int codeRetour = CommandeEmp.listeClientParNom(donnees, nomClient);
+            final int codeRetour = CommandeEmploye.listeClientParNom(donnees, nomClient);
 
             System.exit(codeRetour);
         } else {

@@ -1,5 +1,8 @@
 package org.uqam.banque.commun;
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 
 import org.junit.jupiter.api.Assertions;
@@ -10,9 +13,23 @@ import org.uqam.banque.commun.BaseDeDonnees;
 
 public class BaseDeDonneesTest {
 
+    static final String FICHIER_BD_TEST = "./bd_banque_test.bd";
+
+    BaseDeDonnees newBd() {
+        try {
+            if (Files.exists(Paths.get(FICHIER_BD_TEST))) {
+                Files.delete(Paths.get(FICHIER_BD_TEST));
+            }
+            return new BaseDeDonnees(FICHIER_BD_TEST);
+        } catch(IOException e) {
+            Assertions.fail("Problème avec la BD de test.");
+        }
+        return null;
+    }
+
     @Test
     public void givenBaseDeDonnees_whenFabriqueObjet_thenOk() {
-        BaseDeDonnees baseDeDonnees = new BaseDeDonnees();
+        BaseDeDonnees baseDeDonnees = newBd();
 
         Assertions.assertNotNull(baseDeDonnees);
 
@@ -54,7 +71,7 @@ public class BaseDeDonneesTest {
 
     @Test
     public void givenBaseDeDonnees_whenRechercheClientParNomPourAbidi_thenClientAbidiRetourne() {
-        BaseDeDonnees baseDeDonnees = new BaseDeDonnees();
+        BaseDeDonnees baseDeDonnees = newBd();
 
         final List<Produit> produits = baseDeDonnees.getProduits();
 
@@ -74,7 +91,7 @@ public class BaseDeDonneesTest {
 
     @Test
     public void givenBaseDeDonnees_whenRechercheClientParNomPourUnInexistant_thenAucunClientRetourne() {
-        BaseDeDonnees baseDeDonnees = new BaseDeDonnees();
+        BaseDeDonnees baseDeDonnees = newBd();
 
         final List<Produit> produits = baseDeDonnees.getProduits();
 
@@ -85,7 +102,7 @@ public class BaseDeDonneesTest {
 
     @Test
     public void givenBaseDeDonnees_whenRechercheClientParNomPourNull_thenAucunClientRetourne() {
-        BaseDeDonnees baseDeDonnees = new BaseDeDonnees();
+        BaseDeDonnees baseDeDonnees = newBd();
 
         final List<Produit> produits = baseDeDonnees.getProduits();
 
@@ -96,7 +113,7 @@ public class BaseDeDonneesTest {
 
     @Test
     public void givenBaseDeDonnees_whenRechercheClientParNomPourVide_thenAucunClientRetourne() {
-        BaseDeDonnees baseDeDonnees = new BaseDeDonnees();
+        BaseDeDonnees baseDeDonnees = newBd();
 
         final List<Produit> produits = baseDeDonnees.getProduits();
 

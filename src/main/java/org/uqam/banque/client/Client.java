@@ -2,10 +2,13 @@ package org.uqam.banque.client;
 
 import org.uqam.banque.banque.Produit;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Client {
+public class Client implements Serializable {
+
+    static final long serialVersionUID = 7181815340885489189L;
 
     private String id;
     private String nom;

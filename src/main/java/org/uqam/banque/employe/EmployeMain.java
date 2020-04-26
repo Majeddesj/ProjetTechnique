@@ -13,8 +13,6 @@ public class EmployeMain {
             System.exit(1);
         }
 
-        
-
         String typeCommande = args[0]; // --add, --list, --accept, --reject par exemple
         String nomClient = args[1]; // nom du client
 

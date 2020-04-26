@@ -49,11 +49,37 @@ public class CommandeClient {
         client.getProduits().add(produit);
 
         // tout est beau :)
+
+        donnees.sauvegardeBd();
+
         return 0;
     }
     
     public static int unsubscribeProduitAuClientParNom(BaseDeDonnees donnees, String nomClient, String idProduit) {
-		return 0;
+
+        final Client client = donnees.rechercheClientParNom(nomClient);
+        final Produit produit = donnees.rechercheProduitParId(idProduit);
+
+        if (client == null) {
+            System.out.println("Erreur: Aucun client correspondant à ce nom " + nomClient);
+            return 1;
+        }
+
+        if (produit == null) {
+            System.out.println("Erreur: Aucun produit correspondant à cet identifiant " + idProduit);
+            return 2;
+        }
+
+        System.out.println("Dé-souscription du produit " + idProduit + " pour le client " + nomClient);
+
+        // on ajoute le produit au client
+        client.getProduits().remove(produit);
+
+        // tout est beau :)
+
+        donnees.sauvegardeBd();
+
+        return 0;
 	}
 
 }

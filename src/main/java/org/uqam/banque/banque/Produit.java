@@ -1,6 +1,10 @@
 package org.uqam.banque.banque;
 
-public class Produit {
+import java.io.Serializable;
+
+public class Produit implements Serializable {
+
+    static final long serialVersionUID = 9025505294791625277L;
 
     private String id;
     private String nom;

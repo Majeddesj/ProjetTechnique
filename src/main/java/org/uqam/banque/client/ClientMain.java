@@ -9,12 +9,12 @@ public class ClientMain {
         BaseDeDonnees donnees = new BaseDeDonnees();
 
         if (args.length < 3) {
-            System.out.println("Il faut mettre 3 arguments, de la sorte. \nExemple: ./client -n CLIENT_NAME --status\nExemple: ./client -n CLIENT_NAME --subscribe PRODUCT_ID");
+            System.out.println("Il faut mettre 3 arguments, de la sorte. \nExemple: ./client -n CLIENT_NAME --status\nExemple: ./client -n CLIENT_NAME --subscribe PRODUCT_ID\nExemple: ./client -n CLIENT_NAME --unsubscribe PRODUCT_ID");
             System.exit(1);
         }
 
         if (!args[0].equals("-n")) {
-            System.out.println("Il faut que le premier argument soit = '-n'. \nExemple: ./client -n CLIENT_NAME --status\nExemple: ./client -n CLIENT_NAME --subscribe PRODUCT_ID");
+            System.out.println("Il faut que le premier argument soit = '-n'. \nExemple: ./client -n CLIENT_NAME --status\nExemple: ./client -n CLIENT_NAME --subscribe PRODUCT_ID\nExemple: ./client -n CLIENT_NAME --unsubscribe PRODUCT_ID");
             System.exit(2);
         }
 

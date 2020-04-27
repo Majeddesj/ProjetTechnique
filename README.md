@@ -12,10 +12,11 @@ chmod +x scripts/banque.sh
 ```
 
 # 3. Exécution: client
-
+```
 ./client.sh -n Abidi --status
 ./client.sh -n Abidi --unsubscribe ID_PRODUIT_003
 ./client.sh -n Abidi --subscribe ID_PRODUIT_003
+```
 ## Exemples de commandes incorrectes:
 ```
 ./client.sh -n Abidi --status
